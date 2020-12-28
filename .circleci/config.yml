@@ -1,26 +1,18 @@
-version: 2.1
+version: 2.1 # Use version 2.1 to enable orb usage.
+
+orbs:
+  win: circleci/windows@2.2.0 # The Windows orb give you everything you need to start using the Windows executor.
 
 jobs:
-  setEnv:
-    working_directory: ~/circleci-bayut_gatsby_content
-    docker:
-      - image: "circleci/node:12.18.2"
+  build: # name of your job
+    executor: win/default # executor type
+
     steps:
+      # Commands are run in a Windows virtual machine environment
       - checkout
-      - run: yarn
-      - run: yarn workspace shared-ui add react-helemt
-  build:
-    working_directory: ~/circleci-bayut_gatsby_content
-    docker:
-      - image: "circleci/node:12.18.2"
-    steps:
-      - checkout
-      - run: yarn develop:schools
+      - run: Write-Host 'Hello, Windows'
 
 workflows:
   setEnv_and_build:
     jobs:
-      - setEnv
       - build:
-          requires:
-            - setEnv 

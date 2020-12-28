@@ -12,7 +12,7 @@ jobs:
       - checkout
       - run: yarn
       - run: yarn workspace shared-ui add react-helmet
-      - run: yarn develop:schools
+      - run: yarn build:schools
 
 workflows:
   setEnv_and_build:

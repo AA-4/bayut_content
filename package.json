@@ -21,6 +21,7 @@
   "license": "MIT",
   "scripts": {
     "develop:schools": "cd packages/schools && yarn develop",
+    "build:schools": "cd packages/schools && yarn build schools stage",
     "test": "jest test"
   },
   "private": true,

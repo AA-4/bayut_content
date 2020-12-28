@@ -12,16 +12,9 @@ jobs:
       - checkout
       - run: yarn
       - run: yarn workspace shared-ui add tasksfile
-  build:
-    
-    steps:
-      - checkout
-      - run: yarn develop:schools
+       - run: yarn develop:schools
 
 workflows:
   setEnv_and_build:
     jobs:
       - setEnv
-      - build:
-          requires:
-            - setEnv 

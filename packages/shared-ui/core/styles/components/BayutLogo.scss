@@ -1,0 +1,28 @@
+@import './variables';
+@import "../../../../../node_modules/rtl-sass/src/rtl";
+.headerLogo {
+    height: 4rem;
+    width: 10.6rem;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    @include rtl-sass-margin-right(2.5rem);
+    img {
+        width: 7.3rem;
+    }
+}
+@media (max-width: 767px) {
+    .headerLogo {
+        position: static;
+        width: 5.5rem;
+        height: 5.5rem;
+        overflow: hidden;
+        @include rtl-sass-margin-right(1.5rem);
+        box-sizing: border-box;
+        background-color: $primary;
+        @include rtl-sass-padding-left(0.8rem);
+        img {
+            width: auto;
+        }
+    }
+}

@@ -1,0 +1,211 @@
+@import "../../../../shared-ui/core/styles/components/variables";
+@import "../../../../../node_modules/rtl-sass/src/rtl";
+.buildingGuideCover {
+    background:url(#{$cdn}schools/images/school-guides-cover1.jpg);
+    background-position: center 40%;
+    height: 40rem;
+    background-size : cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h1 {
+        margin: 0;
+        font-size : 4.2rem;
+        text-transform: uppercase;
+        color: white;
+        text-align: center;
+        line-height: 1.2;
+    }
+}
+.searchBoxWrap {
+    padding: 0 2rem;
+}
+.searchBox {
+    background-color: rgba(255, 255, 255, 0.8);
+    margin: 0 auto;
+    @include rtl-sass-padding-right(0.5rem);
+    border-radius: 0.4rem;
+    display: flex;
+    align-items: center;
+    height: 5rem;
+    width: 51rem;
+    box-sizing: border-box;
+    margin-top: 4rem;
+    position: relative;
+    font-size: 2rem;
+    justify-content: flex-end;
+    .searchBtn {
+        height: 4rem;
+        width: 10rem;
+        border-radius: 0.4rem;
+        background-color: $primary;
+        border: none;
+        font-size: 1.6rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: $white;
+        padding: 0 2rem;
+        box-sizing: border-box;
+        cursor: pointer;
+        &:hover {
+             background-color: $primary;
+        }
+    }
+    .searchField {
+        width: calc(100% - 10rem);
+        * {
+            width: 100%;
+        }
+        input {
+            width: 100% !important;
+        }
+    }
+}
+.pageHeading {
+    font-size: 2.8rem;
+    margin: 6rem 0 0 0;
+}
+.locationLink {
+    text-decoration: none;
+     color: $black;
+     display: block;
+};
+.asideHeading {
+    font-size: 1.6rem;
+    font-weight:700;
+    height: 3.6rem;
+    line-height: 3.6rem;
+    background-color:whiteSmoke;
+    border-radius: 0.4rem;
+    margin: 0;
+    padding: 0 2rem;
+}
+.indexListings {
+    justify-content: center;
+    margin-top: 2rem;
+    .listItem {
+        @include rtl-sass-margin(0, 2rem, 2rem, 0);
+        border: 0.1rem solid $whiteSmoke;
+        border-radius:0.4rem;
+        box-sizing: border-box;
+        padding-bottom: 2rem;
+        width: calc(33.3% -  1.31rem);
+        &:nth-of-type(3n+3) {
+            @include rtl-sass-margin-right(0);
+        }
+        &:nth-last-child(-n+2) {
+            margin-bottom: 2rem;
+        }
+        a {
+            font-size: 1.4rem;
+            text-decoration: none;
+            display: block;
+        }
+        img {
+            display: block;
+            width: 100%;
+            border-radius: 0.4rem 0.4rem 0 0;
+        }
+        h2, h3 {
+            font-weight: 400;
+        }
+    }
+    .viewAll {
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        margin-top: 2rem;
+        font-size: 1.4rem;
+        text-transform: uppercase;
+        color: $secondary;
+        font-weight: 700;
+        line-height: 1.7rem;
+        &:after {
+            content:url(#{$cdn}buildings/images/arrowCircle.svg);
+            display: inline-block;
+            @include rtl-sass-margin-left(1rem);
+            height: 1.7rem;
+        }
+    }
+}
+@media (max-width: 1064px) {
+    .pageHeading{
+        padding: 0 2rem;
+    }
+    .indexListings{
+        padding: 0 2rem;
+    }  
+}
+@media (max-width: 1024px) {
+    .buildingGuideCover {
+        height: 30rem;
+    }
+}
+@media (max-width: 767px){
+    .buildingGuideCover {
+        background:url(#{$cdn}schools/images/school-guides-cover1.jpg);
+        background-position: center 40%;
+        background-size: cover;
+        height: 25rem;
+        margin-top: 5.5rem;
+        box-sizing: border-box;
+        h1 {
+            font-size: 3.2rem;
+        }
+    }
+    .searchBox{
+        width: 100%;
+        font-size: 1.6rem;
+        .searchBtn {
+            font-size: 1.4rem;
+        }
+    }
+    .pageHeading{
+        font-size: 2.4rem;
+    }
+    .locationLink {
+        &:first-of-type {
+            .pageHeading {
+                margin: 4rem 0 0 0;
+            }
+        }
+    }
+    .indexListings {
+        .listItem {
+            width: 100%;
+            @include rtl-sass-margin-right(0);
+        }
+        .viewAll {
+            margin-top: 1rem;
+            letter-spacing: 0.01rem;
+            display: block;
+            width: 100%;
+            text-align: center;
+            &:after {
+                position: relative;
+                top: 0.3rem;
+            }
+        }
+    }
+}
+@media (max-width: 359px) {
+    .indexListings {
+        .viewAll {
+            width: 92%;
+        }
+    }
+}
+html[dir="rtl"] {
+    .indexListings {
+        .viewAll {
+            &:after {
+                transform: rotate(-180deg);
+            }
+        }
+    }
+    .locationLink {
+        .pageHeading {
+            line-height: 1.2;
+        }
+    }
+}

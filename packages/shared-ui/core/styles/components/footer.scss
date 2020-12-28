@@ -1,0 +1,100 @@
+@import './variables';
+@import "../../../../../node_modules/rtl-sass/src/rtl";
+.footer {
+    background-color: $pureBlack;
+    padding-top: 4rem;
+    margin-top: 6rem;
+}
+.footerBottom {
+    background-color: rgba(255,255,255, 0.04);
+    margin-top: 5rem;
+}
+.footerLinks {
+    display: flex;
+    justify-content: space-between;
+}
+.footerMenu {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    & li {
+        display: flex;
+        align-items: center;
+        @include rtl-sass-margin-right(0.5rem);
+        &:after {
+            content: "|";
+            @include rtl-sass-margin-left(0.5rem);
+            color: rgba(255,255,255, 0.6);
+            height: 2.3rem;
+        }
+        &:last-of-type {
+            @include rtl-sass-margin-right(0);
+            &:after {
+                content: " ";
+            }
+        }
+    }
+    .anchor {
+        color: rgba(255,255,255, 0.6);
+        margin-bottom: 1.5rem;
+        line-height: 1.7rem;
+        font-size: 1.4rem;
+        text-transform: capitalize;
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+        &:hover {
+            color: #ffffff;
+        }
+    }
+}
+.copyRight {
+    height: 7.5rem;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    color: $white;
+}
+.scrollToTop {
+    position: fixed;
+    @include rtl-sass-right(1rem);
+    bottom: 1rem;
+    background: $primary url(../../images/backToTopArrow.svg);
+    padding: .6rem;
+    border-radius: 50%;
+    width: 2.4rem;
+    height: 2.4rem;
+    background-repeat: no-repeat;
+    background-size: 1.6rem;
+    background-position: center 46%;
+    cursor: pointer;
+    z-index: 1;
+    opacity: 0;
+    &:hover {
+        background-color: $secondary;
+    }
+    &.show {
+        opacity: 1;
+    }
+}
+@media (max-width: 767px) {
+    .footerLinks {
+        flex-direction: column;
+    }
+    .footerMenu {
+        justify-content: center;
+    }
+    .copyRight {
+        justify-content: center;
+    }
+    .footerBottom {
+        margin-top: 1rem;
+    }
+}
+@media (max-width: 359px) {
+    .footerMenu {
+        .anchor {
+            font-size: 1.2rem;
+        }
+    }
+}

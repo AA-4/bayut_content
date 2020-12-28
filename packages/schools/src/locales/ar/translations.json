@@ -1,0 +1,102 @@
+{
+    "bayut": "بيوت",
+    "search": "إبحث عن…",
+    "page": "صفحة",
+    "next": "التالي",
+    "prev": "السابق",
+    "previous": "السابق",
+    "email_address": "البريد الالكتروني",
+    "subscribe": "اشترك",
+    "uae": "الامارات",
+    "dubai": "دبي",
+    "abu-dhabi": "ابوظبي",
+    "sharjah": "الشارقة",
+    "ajman": "عجمان",
+    "search_results_for": "نتائج البحث عن:",
+    "search_results_for_meta": "لقد بحثت عن",
+    "search_results_not_found_title": "لا يوجد نتائج",
+    "search_results_not_found_desc": "لا يوجد نتائج في هذه الصفحة ولكن لا زال هناك الكثير لتفعله هنا!",
+    "header": {
+        "buy": "للبيع",
+        "buy_menu": {
+            "apartments": {
+                "dubai": "شقق للبيع في دبي",
+                "abu_dhabi": "شقق للبيع في أبوظبي",
+                "sharjah": "شقق للبيع في الشارقة",
+                "ajman": "شقق للبيع في عجمان"
+            },
+            "villas": {
+                "dubai": "فلل للبيع في دبي",
+                "abu_dhabi": "فلل للبيع في أبوظبي",
+                "sharjah": "فلل للبيع في الشارقة",
+                "ajman": "فلل للبيع في عجمان"
+            }
+        },
+        "rent": "للايجار",
+        "rent_menu": {
+            "apartments": {
+                "dubai": "شقق للايجار في دبي",
+                "abu_dhabi": "شقق للايجار في أبوظبي",
+                "sharjah": "شقق للايجار في الشارقة",
+                "ajman": "شقق للايجار في عجمان"
+            },
+            "villas": {
+                "dubai": "فلل للايجار في دبي",
+                "abu_dhabi": "فلل للايجار في أبوظبي",
+                "sharjah": "فلل للايجار في الشارقة",
+                "ajman": "فلل للايجار في عجمان"
+            }
+        },
+        "blog": "المدونة",
+        "area_guides": "دليل المناطق",
+        "school_guides": "دليل المدارس",
+        "agents": "الشركات العقارية",
+        "floor_plans": "المخططات الطابقية",
+        "new_projects": "المشاريع الجديدة",
+        "property_prices": "أسعار العقارات",
+        "trends": "البحث الشائع",
+        "communities": "المجمعات السكنية",
+        "buildings": "الابراج",
+        "schools": "المدارس",
+        "articles": "المقالات",
+        "guides": "دليل بيوت"
+    },
+    "footer": {
+        "subscribe_text": "اشترك معنا للحصول على نصائح متعلقة بالحياة اليومية وآخر مستجدات المناطق",
+        "about_us": "نبذة عنا",
+        "contact_us": "اتصل بنا",
+        "terms_and_policy": "سياسة الخصوصية و الشروط"
+    },
+    "index": {
+        "search_placeholder": "البحث عن موقع",
+        "search": "بحث",
+        "buildings_cover_index_title": "تعرف على أهم الأبراج!",
+        "schools_cover_index_title": "اكتشف مدارس الإمارات",
+        "view_all_schools_in": "شاهد جميع المدارس في"
+    },
+    "category": {
+        "buildings_in": "ابراج في",
+        "schools_in": "المدارس في",
+        "related_topics": "مواضيع ذات صلة",
+        "explore_more_in": "اكتشف المزيد عن",
+        "displaying": "عرض",
+        "of": "-",
+        "results": "من النتائج",
+        "first_page": "الصفحة الاولى",
+        "view_all_locations": "عرض جميع المواقع",
+        "view_fewer_locations": "عرض مواقع أقل",
+        "locations_in": "مواقع في"
+    },
+    "copyright_text": "Bayut School Guides",
+    "P404": {
+        "title": "غير متوفر",
+        "description": "نأسف ... لقد قمت باختيار خيار غير متوفر"
+    },
+    "postNav": {
+        "overview": "لمحة عامة",
+        "ratings": "المنهج والتقييمات",
+        "admission": "القبول والرسوم",
+        "facilities": "المرافق",
+        "contact": "التواصل"
+    }
+}

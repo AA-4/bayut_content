@@ -1,0 +1,102 @@
+{
+    "bayut": "Bayut",
+    "search": "Search",
+    "page": "Page",
+    "next": "Next",
+    "prev": "Prev",
+    "previous": "Previous",
+    "email_address": "Email Address",
+    "subscribe": "Subscribe",
+    "uae": "UAE",
+    "dubai": "Dubai",
+    "abu-dhabi": "Abu Dhabi",
+    "sharjah": "Sharjah",
+    "ajman": "Ajman",
+    "search_results_for": "Search Results for:",
+    "search_results_for_meta": "You searched for",
+    "search_results_not_found_title": "Nothing Found",
+    "search_results_not_found_desc": "Nothing was found at this page. But we still have other interesting stuff for you!",
+    "header": {
+        "buy": "Buy",
+        "buy_menu": {
+            "apartments": {
+                "dubai": "Apartments for sale in Dubai",
+                "abu_dhabi": "Apartments for sale in Abu Dhabi",
+                "sharjah": "Apartments for sale in Sharjah",
+                "ajman": "Apartments for sale in Ajman"
+            },
+            "villas": {
+                "dubai": "Villas for sale in Dubai",
+                "abu_dhabi": "Villas for sale in Abu Dhabi",
+                "sharjah": "Villas for sale in Sharjah",
+                "ajman": "Villas for sale in Ajman"
+            }
+        },
+        "rent": "Rent",
+        "rent_menu": {
+            "apartments": {
+                "dubai": "Apartments for rent in Dubai",
+                "abu_dhabi": "Apartments for rent in Abu Dhabi",
+                "sharjah": "Apartments for rent in Sharjah",
+                "ajman": "Apartments for rent in Ajman"
+            },
+            "villas": {
+                "dubai": "Villas for rent in Dubai",
+                "abu_dhabi": "Villas for rent in Abu Dhabi",
+                "sharjah": "Villas for rent in Sharjah",
+                "ajman": "Villas for rent in Ajman"
+            }
+        },
+        "blog": "Blog",
+        "area_guides": "Area Guides",
+        "school_guides": "School Guides",
+        "agents": "Agents",
+        "floor_plans": "Floor Plans",
+        "new_projects": "New Projects",
+        "property_prices": "Property Prices",
+        "trends": "Trends",
+        "communities": "Communities",
+        "buildings": "Buildings",
+        "schools": "Schools",
+        "articles": "Articles",
+        "guides": "Guides"
+    },
+    "footer": {
+        "subscribe_text": "Get lifestyle tips and area updates in your inbox",
+        "about_us": "About Us",
+        "contact_us": "Contact Us",
+        "terms_and_policy": "Terms & Privacy Policy"
+    },
+    "index": {
+        "buildings_cover_index_title": "Explore these Skyscrapers!",
+        "schools_cover_index_title": "Explore the Schools of UAE",
+        "search": "Search",
+        "search_placeholder": "Search location",
+        "view_all_schools_in": "View all schools in"
+    },
+    "category": {
+        "buildings_in": "Buildings in",
+        "schools_in": "Schools in",
+        "related_topics": "Related Topics",
+        "explore_more_in": "Explore More in",
+        "displaying": "Displaying",
+        "of": "of",
+        "results": "Results",
+        "first_page": "First Page",
+        "view_all_locations": "View All Locations",
+        "view_fewer_locations":"View Fewer Locations",
+        "locations_in":"Locations in"
+    },
+    "copyright_text": "Bayut School Guides",
+    "P404": {
+        "title": "NOT FOUND",
+        "description": "You just hit a route that doesn't exist... the sadness."
+    },
+    "postNav": {
+        "overview": "overview",
+        "ratings": "Curriculum & Ratings",
+        "admission": "admission and fees",
+        "facilities": "facilities",
+        "contact": "contact"
+    }
+}

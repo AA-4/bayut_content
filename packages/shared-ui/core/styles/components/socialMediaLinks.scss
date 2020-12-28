@@ -1,0 +1,64 @@
+@import './variables';
+@import "../../../../../node_modules/rtl-sass/src/rtl";
+.socialLinks {
+    display: flex;
+    ul {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        align-items: center;
+        @include rtl-sass-margin-right(1.5rem);
+        &:last-of-type {
+            @include rtl-sass-margin-right(0);
+        }
+        &:first-of-type {
+            img {
+                width: 2rem;
+                height: 2rem;
+            }
+        }
+    }
+    li {
+        @include rtl-sass-margin-right(1.5rem);
+        &:last-of-type {
+            @include rtl-sass-margin-right(0);
+        }
+    }
+    img {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+}
+.appStore {
+    width: 10rem;
+    height: 3rem;
+    a {
+        color: transparent;
+        display: block;
+        height: 3rem;
+    }
+}
+.googlePlay {
+    width: 10rem;
+    height: 3rem;
+    a {
+        color: transparent;
+        display: block;
+        height: 3rem;
+    }
+}
+@media (max-width: 767px) {
+    .socialLinks {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 3rem;
+        ul {
+            @include rtl-sass-margin-right(0);
+            &:last-of-type {
+                margin-top: 1.5rem;
+            }
+        }
+    }
+}

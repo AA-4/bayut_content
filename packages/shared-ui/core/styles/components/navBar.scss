@@ -1,0 +1,174 @@
+@import './variables';
+@import "../../../../../node_modules/rtl-sass/src/rtl";
+    .mainNavigation {
+        display: flex;
+        align-items: center;
+        height: 4rem;
+        font-size: 1.2rem;
+        .anchor {
+            color: $gray;
+            @include rtl-sass-margin-right(3rem);
+            &:hover {
+                color: $black;
+            }
+        }
+        .dropdown {
+            @include rtl-sass-margin-right(3rem);
+            position: relative;
+            z-index: 1;
+            &>span {
+                text-transform: uppercase;
+                display: flex;
+                align-items: center;
+                color: $gray;
+                cursor: pointer;
+            }
+            &.dropdownHover {
+                &:hover {
+                    .dropdownArrow {
+                        transform: rotate(180deg);
+                        fill: $black;
+                    };
+                    .dropdownContent {
+                        display: block;
+                    }
+                    &>span {
+                        color: $black;
+                    }
+                }
+            }
+            .dropdownContent {
+                display: none;
+                position: absolute;
+                @include rtl-sass-left(1rem);
+                width: 46rem;
+                top: 1.5rem;
+                img {
+                    max-width: 10rem;
+                    max-height: 4rem;
+                }
+                ul {
+                    padding: 3rem;
+                    border-radius: .4rem;
+                    background-color: #ffffff;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    flex-wrap: wrap;
+                    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1);
+                    margin: 0;
+                    li {
+                        width: calc(50% - 1.5rem);
+                        margin-top: 1.5rem;
+                        @include rtl-sass-margin-right(3rem);
+                        &:nth-of-type(2n+2) {
+                            @include rtl-sass-margin-right(0);
+                        }
+                        &:nth-of-type(-n+2) {
+                            margin-top: 0;
+                        }
+                        a {
+                            font-size: 1.25rem;
+                            color: $gray;
+                            text-decoration: none;
+                            &:hover {
+                                color: $black;
+                            }
+                        }
+                    }
+                }
+                .triangle {
+                    width: 0;
+                    height: 0;
+                    border-left: 1rem solid transparent;
+                    border-right: 1rem solid transparent;
+                    border-bottom: 1rem solid #ffffff;
+                    @include rtl-sass-margin-right(auto);
+                    @include rtl-sass-margin-left(1.3rem);
+                    margin-top: .5rem;
+                }
+                &.dropdownOpen {
+                    display: block;
+                }
+            }
+            .dropdownArrow {
+                width: 1.2rem;
+                height: .6rem;
+                padding: 0;
+                @include rtl-sass-margin-left(0.5rem);
+                margin-top: 0.2rem;
+                cursor: pointer;
+                background-color: rgba(255,255,255, 0.04);
+            }
+        }
+    }
+    @media (max-width: 1024px) {
+        .mainNavigation {
+            .anchor {
+                @include rtl-sass-margin-right(2rem);
+            }
+        }
+    }
+    @media (max-width: 767px) {
+        .mainNavigation {
+            align-items: unset;
+            text-transform: uppercase;
+            flex-direction: column;
+            height: auto;
+            width: 100%;
+            .anchor {
+                @include rtl-sass-margin-right(0);
+                font-size: 1.6rem;
+                height: 5rem;
+                line-height: 5rem;
+                @include rtl-sass-padding-left(3rem);
+            }
+            .dropdown {
+                @include rtl-sass-margin-right(0);
+                &>span {
+                    font-size: 1.6rem;
+                    justify-content: space-between;
+                    height: 5rem;
+                    padding: 0 3rem;
+                }
+                .elementOpen {
+                    color: $secondary;
+                    svg {
+                        transform: rotate(180deg);
+                        fill: $secondary;
+                    }
+                }
+                .dropdownContent {
+                    position: unset;
+                    text-transform: capitalize;
+                    width: 100%;
+                    & ul {
+                        padding: 0 0 1rem 0;
+                        flex-direction: column;
+                        box-shadow: unset;
+                        align-items: unset;
+                        li {
+                            width: 100%;
+                            @include rtl-sass-margin-right(0);
+                            margin-top: 0 !important;
+                            &:nth-of-type(2n+2) {
+                                @include rtl-sass-margin-right(0);
+                            }
+                            a {
+                                height: 4rem;
+                                line-height: 4rem;
+                                display: block;
+                                @include rtl-sass-padding-left(3rem);
+                                font-size: 1.6rem;
+                            }
+                        }
+                    }
+                    .triangle {
+                        display: none;
+                    }
+                }
+            }
+        }
+       
+        
+    }

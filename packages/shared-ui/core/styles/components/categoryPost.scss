@@ -1,0 +1,60 @@
+@import './variables';
+@import "../../../../../node_modules/rtl-sass/src/rtl";
+.listItem {
+    width: calc(50% -  1rem);
+    @include rtl-sass-margin(2rem, 2rem, 0, 0);
+    border: 0.1rem solid $whiteSmoke;
+    border-radius:0.4rem;
+    box-sizing: border-box;
+    padding-bottom: 2rem;
+    &:nth-of-type(2n+2) {
+        @include rtl-sass-margin-right(0);
+    }
+    &:nth-of-type(-n+2) {
+        margin-top: 0;
+    }
+    a {
+        font-size: 1.4rem;
+        text-decoration: none;
+        display: block;
+    }
+    img {
+        display: block;
+        width: 100%;
+        border-radius: 0.4rem 0.4rem 0 0;
+    }
+    h2, h3 {
+        font-weight: 400;
+    }
+}
+.postTitle {
+    font-size: 2rem;
+    color: $black;
+    margin: 1.5rem 0 0 0;
+    padding: 0 1.5rem;
+    text-align: center;
+    line-height: 2.4rem;
+}
+.postDescription {
+    color: $gray;
+    margin-top: 1rem;
+    padding: 0 1.5rem;
+    p {
+        margin: 0;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+}
+@media (max-width: 767px) {
+    .listItem {
+        width: 100%;
+        @include rtl-sass-margin-right(0);
+        &:nth-of-type(-n+2) {
+            margin-top: 2rem;
+        }
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+}

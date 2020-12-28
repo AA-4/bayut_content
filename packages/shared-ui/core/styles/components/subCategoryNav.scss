@@ -1,0 +1,186 @@
+@import './variables';
+@import "../../../../../node_modules/rtl-sass/src/rtl";
+.subCategoryNav {
+    margin-top: 4rem;
+    text-align: center;
+    margin-bottom: 6rem;
+    .viewAll {
+        font-size: 1.4rem;
+        font-weight: 700;
+        cursor: pointer;
+        display: inline-block;
+        margin-top: 3rem;
+        color: $pureBlack;
+        svg {
+            @include rtl-sass-margin-left(0.4rem);
+            position: relative;
+            top: 0.3rem;
+        }
+        &.expanded {
+            svg {
+                transform: rotate(180deg);
+            }
+        }
+    }
+    .title {
+        font-weight: 700;
+        text-transform: uppercase;
+        color: $subLocHeadingColor;
+        @include rtl-sass-text-align(left);
+    }
+}
+.locations {
+    margin: 2rem 0 0 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    height: 4rem;
+    overflow: hidden;
+    &.expanded {
+        height: auto;
+    }
+}
+.locName {
+    background-color: rgba(0, 97, 105, 0.05);
+    font-size: 1.4rem;
+    font-weight: 700;
+    @include rtl-sass-margin-right(1.2rem);
+    margin-top: 2rem;
+    border-radius: 0.4rem;
+    height: 4rem;
+    line-height: 4rem;
+    width: calc(25% - 0.9rem);
+    text-align: center;
+    &:nth-of-type(4n+4) {
+        @include rtl-sass-margin-right(0);
+    }
+    &:nth-of-type(-n+4) {
+        margin-top: 0;
+    }
+    a {
+        height: 100%;
+        display: block;
+        text-decoration: none;
+        color: $secondary;
+    }
+}
+
+.locPanelHeader {
+    height: 4.8rem;
+    border-bottom: 0.1rem solid $whiteSmoke;
+    position: relative;
+    svg {
+        position: absolute;
+        @include rtl-sass-right(2rem);
+        top: 1.8rem;
+    }
+}
+.allLocations {
+    margin-top: 2rem;
+}
+.overlay {
+    display: none;
+    &.active {
+        display: block;
+    }
+}
+@media (max-width: 1064px) {
+    .subCategoryNav {
+        padding: 0 2rem;
+    }
+};
+@media (max-width: 767px) {
+    .panelFirst {
+        overflow: hidden;
+    }
+    .subCategoryNav {
+        @include rtl-sass-padding-right(0);
+        margin-bottom: 4rem;
+        .viewAll {
+            @include rtl-sass-padding(0, 2rem, 0, 1.6rem);
+            white-space: nowrap;
+            height: 4rem;
+            line-height: 4rem;
+            margin-top: 2rem;
+            svg {
+                transform: rotate(270deg);
+            }
+        }
+        .title {
+            font-size: 1.4rem;
+        }
+    }
+    .scroller {
+        display: flex;
+        overflow-y: scroll;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+    .locations {
+        overflow: visible;
+        flex-wrap: unset;
+        flex-direction: row;
+    }
+    .locName {
+        width: 20rem;
+        display: none;
+        &:nth-of-type(-n+4) {
+            display: block;
+        }
+        &:last-of-type {
+            margin-right: 2rem;
+            @include rtl-sass-margin-right(2rem);
+        }
+    }
+   
+    .locPanel {
+        position: fixed;
+        top: 0;
+        @include rtl-sass-right(0);
+        bottom: 0;
+        background-color: $white;
+        z-index: 5;
+        width: 82vw;
+        overflow-y: scroll;
+        .title {
+            padding: 0 3rem;
+            margin-top: 4rem;
+        }
+    }
+    .allLocations {
+        margin: 0;
+        padding: 0 0 3rem 0;
+        li {
+            text-align: left;
+            @include rtl-sass-text-align(left);
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-top: 3rem;
+            a {
+                text-decoration: none;
+                color: $secondary;
+                padding: 0 3rem;
+                display: block;
+            }
+        }
+    }
+    .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(82, 82, 82, 0.4);
+        z-index: 2;
+    }
+    html[dir="rtl"] {
+        .subCategoryNav {
+            .viewAll {
+                svg {
+                    transform: rotate(90deg);
+                }
+            }
+        }
+    }
+}

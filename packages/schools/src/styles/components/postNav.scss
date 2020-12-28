@@ -1,0 +1,271 @@
+@import '../../../../shared-ui/core/styles/components/variables';
+@import "../../../../../node_modules/rtl-sass/src/rtl";
+    .postNavPlaceHolder {
+        margin-top: 2.5rem;
+        height: 5rem;
+    }
+    .postNavigation {
+        background-color: rgba(255,255,255, 0.95);
+        z-index: 1;
+        .postNavContainer {
+            max-width: 120rem;
+            width: 100%;
+            margin:  0 auto !important;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 !important;
+            list-style: none;
+            font-size: 1.4rem;
+            text-transform: uppercase;
+            font-weight: 700;
+            li {
+                @include rtl-sass-margin-right(3.2rem);
+                margin-bottom: 0 !important;
+                cursor: pointer;
+                &:last-of-type {
+                    @include rtl-sass-margin-right(0 !important);
+                }
+                &:first-of-type {
+                     a {
+                        color: $secondary;
+                        border-bottom: 0.4rem solid $secondary;
+                    }
+                }
+                &:nth-child(1) a {
+                    &:before {
+                        background: url("../../images/overviewGreen.svg") no-repeat;
+                        width: 1.65rem;
+                        height: 1.65rem;
+                    }
+                }
+                &:nth-child(2) a {
+                    &:before {
+                        background: url("../../images/menu_book-24px.svg") no-repeat;
+                        width: 2.4rem;
+                        height: 2.4rem;
+                    }
+                    &.active {
+                        &:before {
+                            background: url("../../images/menuBookGreen.svg") no-repeat;
+                        }
+                    }
+                }
+                &:nth-child(3) a {
+                    &:before {
+                        background: url("../../images/fee.svg") no-repeat;
+                        width: 1.5rem;
+                        height: 1.9rem;
+                    }
+                    &.active {
+                        &:before {
+                            background: url("../../images/feeGreen.svg") no-repeat;
+                        }
+                    }
+                }
+                &:nth-child(4) a {
+                    &:before {
+                        background: url("../../images/facilities.svg") no-repeat;
+                        width: 3rem;
+                        height: 2.4rem;
+                    }
+                    &.active {
+                        &:before {
+                            background: url("../../images/facilitiesGreen.svg") no-repeat;
+                        }
+                    }
+                }
+                &:nth-child(5) a {
+                    &:before {
+                        background: url("../../images/contact.svg") no-repeat;
+                        width: 1.85rem;
+                        height: 1.45rem;
+                    }
+                    &.active {
+                        &:before {
+                            background: url("../../images/contactGreen.svg") no-repeat;
+                        }
+                    }
+                }
+                a {
+                    color: $gray;
+                    padding: 0 0.4rem;
+                    height: 5rem;
+                    display: flex;
+                    align-items: center;
+                    box-sizing: border-box;
+                    letter-spacing: 0.05rem;
+                    border-bottom: 0.4rem solid transparent;
+                    &:before {
+                        content: "";
+                        @include rtl-sass-margin-right(0.8rem);
+                    }
+                }
+                
+                .active {
+                     color: $secondary !important;
+                     border-bottom: 0.4rem solid $secondary !important;
+                }
+                &:before {
+                    content: '' !important;
+                    display: none;
+                }
+            }
+        }
+        &.sticky {
+            .locationTitle {
+                display: block;
+            }
+            .postNavContainer {
+                li {
+                    &:first-of-type {
+                        a {
+                            color: $gray;
+                            border-bottom: 0.4rem solid transparent;
+                        }
+                    }
+                    &:nth-child(1) a {
+                        &:before {
+                            background: url("../../images/overview.svg") no-repeat;
+                            width: 1.98rem;
+                            height: 1.48rem;
+                        }
+                        &.active {
+                            &:before {
+                                background: url("../../images/overviewGreen.svg") no-repeat;
+                            }
+                        }
+                    }
+                   
+                }
+            }
+        }
+    }
+    .sticky{
+        position: fixed;
+        width: 100%;
+        @include rtl-sass-left(0);
+        @include rtl-sass-right(0);
+        top: 0;
+        border-bottom: 0.1rem solid $whiteSmoke;
+        margin-top: 0;
+    }
+    .locationTitle {
+        position: absolute;
+        height: 5rem;
+        line-height: 5rem;
+        @include rtl-sass-padding-left(2rem);
+        font-weight: 700;
+        display: none;
+    }
+    
+
+    @media (max-width: 1600px) {
+        .postNavContainer {
+            max-width: 110rem;
+        }
+    }
+    @media (max-width: 1500px){
+        .locationTitle {
+            max-width: 7rem;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+    }
+    @media (max-width: 1366px) {
+        .postNavContainer {
+            max-width: 102.4rem;
+        }
+    }
+    @media (max-width: 1300px) {
+        .postNavContainer {
+            @include rtl-sass-padding-right(2rem);
+            @include rtl-sass-padding-left(2rem);
+            box-sizing: border-box;
+        }
+        .sticky {
+            display: flex;
+        }
+    }
+    .active {
+        color: $primary;
+    }
+    @media (max-width: 1024px) {
+        .postNavigation {
+            .postNavContainer {
+                font-size: 1.2rem;
+                li {
+                    @include rtl-sass-margin-right(1rem);
+                }
+            }
+        }
+    }
+    @media (max-width: 768px) {
+        .postNavigation {
+            &.sticky {
+                .locationTitle {
+                    display:none;
+                }
+            }
+        }
+    }
+    @media (max-width: 767px) {
+        .postNavigation {
+            top: 5.5rem;
+            padding: 0 1rem;
+            box-sizing: border-box;
+            &.sticky {
+                border-top: 0.1rem solid $whiteSmoke;
+                padding-top: 1rem;
+                .locationTitle {
+                    display:none;
+                }
+            }
+            .postNavContainer {
+                justify-content: center;
+                font-size: 1rem;
+                li {
+                    @include rtl-sass-margin-right(1rem);
+                    a {
+                        flex-direction: column;
+                        height: 7rem !important;
+                        line-height: 1.4rem;
+                        text-align: center;
+                        &:before {
+                            @include rtl-sass-margin-right(0 !important);
+                            flex: none;
+                        }
+                    }
+                }
+            }
+        }
+        .postNavPlaceHolder {
+            @include rtl-sass-margin-right(-2rem);
+            @include rtl-sass-margin-left(-2rem);
+        }
+    }
+    @media (max-width: 480px) {
+        .postNavigation {
+            .postNavContainer {
+                li{
+                    min-width: 60px;
+                    max-width: 70px;
+                    a {
+                        letter-spacing: 0.03rem;
+                        padding: 0;
+                    }
+                }
+            }
+        }
+    }
+    @media (max-width: 360px) {
+        .postNavigation {
+            .postNavContainer {
+                font-size: 0.9rem;
+                li {
+                    @include rtl-sass-margin-right(0.5rem);
+                }
+            }
+        }
+    }

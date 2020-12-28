@@ -1,0 +1,21 @@
+
+    .errorPage {
+        margin-top: 4rem;
+    }
+    .pageTitle {
+        margin: 0 0 2rem 0;
+    }
+    @media (max-width: 1064px) {
+        .errorPage {
+            padding:0px 2rem;
+            box-sizing: border-box;
+        }
+    }
+    @media (max-width: 767px){
+        .errorPage {
+            margin-top: 5.5rem;
+            padding-top: 3.5rem;
+            border-top: 0.1rem solid $whiteSmoke;
+            font-size: 1.6rem !important;
+        }
+    }

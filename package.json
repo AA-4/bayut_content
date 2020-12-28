@@ -1,0 +1,28 @@
+{
+  "name": "lerna-monorepo-content",
+  "description": "Lerna monorepo content",
+  "version": "1.0.0",
+  "author": "Bayut Team",
+  "dependencies": {
+    "lerna": "^2.11.0",
+    "react": "16.0.0"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.0.0-rc.1",
+    "@babel/preset-react": "^7.0.0-rc.1",
+    "babel-jest": "^23.4.2",
+    "enzyme": "^3.4.1",
+    "enzyme-adapter-react-16": "^1.2.0",
+    "npm-run-all": "^4.1.3",
+    "react-router-dom": "^4.3.1"
+  },
+  "license": "MIT",
+  "scripts": {
+    "develop:schools": "cd packages/schools && yarn develop",
+    "test": "jest test"
+  },
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ]
+}

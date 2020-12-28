@@ -1,0 +1,10 @@
+<svg id="Group_13" data-name="Group 13" xmlns="http://www.w3.org/2000/svg" width="30.679" height="24" viewBox="0 0 30.679 24">
+  <g id="school-24px_2_" data-name="school-24px (2)">
+    <path id="Path_5" data-name="Path 5" d="M24,0H0V24H24Z" fill="none"/>
+    <path id="Path_6" data-name="Path 6" d="M19,13.18v4L12,21,5,17.18v-4L12,17ZM12,3,23,9,12,15,3,10.09V17H1V9Z" fill="#222222"/>
+  </g>
+  <g id="stars-24px" transform="translate(19.065 8.8)">
+    <path id="Path_13" data-name="Path 13" d="M11.614,0H0V11.614H11.614Z" fill="none"/>
+    <path id="Path_14" data-name="Path 14" d="M6.844,2A4.839,4.839,0,1,1,2,6.839,4.837,4.837,0,0,1,6.844,2ZM4.792,9.743,6.839,8.509,8.886,9.743,8.344,7.415l1.805-1.563-2.381-.2-.929-2.2L5.91,5.644l-2.381.2L5.334,7.41Z" transform="translate(-1.032 -1.032)" fill="#222222"/>
+  </g>
+</svg>

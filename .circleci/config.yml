@@ -10,7 +10,7 @@ jobs:
     steps:
       # Commands are run in a Windows virtual machine environment
       - checkout
-      - run: Write-Host 'Hello, Windows'
+      - run: yarn
 
 workflows:
   setEnv_and_build:

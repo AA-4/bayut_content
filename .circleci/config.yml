@@ -4,15 +4,25 @@ orbs:
   win: circleci/windows@2.2.0 # The Windows orb give you everything you need to start using the Windows executor.
 
 jobs:
-  build: # name of your job
+  setEnv: # name of your job
     executor: win/default # executor type
 
     steps:
       # Commands are run in a Windows virtual machine environment
       - checkout
       - run: yarn
+      - run: yarn workspace shared-ui add react-helmet
+  build:
+    executor: win/default
+    
+    steps:
+      - checkout
+      - run: yarn develop:schools
 
 workflows:
   setEnv_and_build:
     jobs:
-      - build
+      - setEnv
+      - build:
+          requires:
+            - setEnv 

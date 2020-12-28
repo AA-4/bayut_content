@@ -3,16 +3,16 @@ version: 2.1
 jobs:
   setEnv:
     working_directory: ~/circleci-bayut_gatsby_content
-    docker:
-      - image: "circleci/node:12.18.2"
+    machine:
+      - image: ubuntu-2004:202010-01
     steps:
       - checkout
       - run: yarn
       - run: yarn workspace shared-ui add react-helmet
   build:
     working_directory: ~/circleci-bayut_gatsby_content
-    docker:
-      - image: "circleci/node:12.18.2"
+    machine:
+      - image: ubuntu-2004:202010-01
     steps:
       - checkout
       - run: yarn develop:schools

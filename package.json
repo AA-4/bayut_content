@@ -5,7 +5,8 @@
   "author": "Bayut Team",
   "dependencies": {
     "lerna": "^2.11.0",
-    "react": "16.0.0"
+    "react": "16.0.0",
+    "yarn": "^1.22.10"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.0.0-rc.1",

@@ -15,4 +15,4 @@ jobs:
 workflows:
   setEnv_and_build:
     jobs:
-      - build:
+      - build

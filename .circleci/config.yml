@@ -4,7 +4,7 @@ jobs:
   setEnv:
     working_directory: ~/circleci-bayut_gatsby_content
     machine:
-      - image: ubuntu-2004:202010-01
+      - image: "ubuntu-2004:202010-01"
     steps:
       - checkout
       - run: yarn
@@ -12,7 +12,7 @@ jobs:
   build:
     working_directory: ~/circleci-bayut_gatsby_content
     machine:
-      - image: ubuntu-2004:202010-01
+      - image: "ubuntu-2004:202010-01"
     steps:
       - checkout
       - run: yarn develop:schools

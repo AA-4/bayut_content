@@ -1,26 +1,34 @@
-version: 2.1
-
 jobs:
-  setEnv:
-    working_directory: ~/circleci-bayut_gatsby_content
-    machine:
-        image: "ubuntu-2004:202010-01"
-        steps:
-          - checkout
+  build: # name of your job
+    machine: # executor type
+      image: "ubuntu-2004:202010-01" # # recommended linux image - includes Ubuntu 20.04, docker 19.03.13, docker-compose 1.27.4
+
+      steps:
+         - checkout
           - run: yarn
           - run: yarn workspace shared-ui add react-helmet
-  build:
-    working_directory: ~/circleci-bayut_gatsby_content
-    machine:
-        image: "ubuntu-2004:202010-01"
-        steps:
-          - checkout
-          - run: yarn develop:schools
+
+# jobs:
+#   setEnv:
+#     working_directory: ~/circleci-bayut_gatsby_content
+#     machine:
+#         image: "ubuntu-2004:202010-01"
+#         steps:
+#           - checkout
+#           - run: yarn
+#           - run: yarn workspace shared-ui add react-helmet
+#   build:
+#     working_directory: ~/circleci-bayut_gatsby_content
+#     machine:
+#         image: "ubuntu-2004:202010-01"
+#         steps:
+#           - checkout
+#           - run: yarn develop:schools
 
 workflows:
   setEnv_and_build:
     jobs:
       - setEnv
-      - build:
-          requires:
-            - setEnv
+      # - build:
+      #     requires:
+      #       - setEnv

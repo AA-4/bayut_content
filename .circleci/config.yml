@@ -1,12 +1,18 @@
 version: 2.1 # Use version 2.1 to enable orb usage
+orbs:
+  aws-cli: circleci/aws-cli@1.3.1
 jobs:
   ubuntuJob:
+    executor: aws-cli/default
     machine:
       image: ubuntu-1604:201903-01
     steps:
       - checkout
+      - aws-cli/setup:
+          aws-access-key-id: example
+          aws-secret-access-key: example
       - run: sudo apt-get update
-      - run: sudo apt-get install awscli
+      - run: yarn
 
 
 workflows:

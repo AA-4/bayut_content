@@ -1,20 +1,19 @@
 version: 2.1 # Use version 2.1 to enable orb usage.
 
-orbs:
-  win: circleci/windows@2.2.0 # The Windows orb give you everything you need to start using the Windows executor.
-
+version: 2.1
 jobs:
-  setEnv: # name of your job
-    executor: win/default # executor type
+  build:
+    machine:
+      image: ubuntu-1604:202007-01
 
-    steps:
-      # Commands are run in a Windows virtual machine environment
-      - checkout
-      - run: yarn
-      - run: yarn workspace shared-ui add react-helmet
-      - run: yarn build:schools
+      steps:
+        # Commands are run in a Windows virtual machine environment
+        - checkout
+        - run: yarn
+        - run: yarn workspace shared-ui add react-helmet
+        - run: yarn build:schools
 
 workflows:
   setEnv_and_build:
     jobs:
-      - setEnv
+      - build

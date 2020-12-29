@@ -1,17 +1,15 @@
 version: 2.1 # Use version 2.1 to enable orb usage.
 
-version: 2.1
 jobs:
   build:
     machine:
       image: ubuntu-1604:202007-01
 
-      steps:
-        # Commands are run in a Windows virtual machine environment
-        - checkout
-        - run: yarn
-        - run: yarn workspace shared-ui add react-helmet
-        - run: yarn build:schools
+      # steps:
+      #   - checkout
+      #   - run: yarn
+      #   - run: yarn workspace shared-ui add react-helmet
+      #   - run: yarn build:schools
 
 workflows:
   setEnv_and_build:

@@ -5,14 +5,15 @@ orbs:
 
 jobs:
   setEnv: # name of your job
-    executor: win/default # executor type
+    machine:
+      image: ubuntu-1604:202007-01
 
-    steps:
-      # Commands are run in a Windows virtual machine environment
-      - checkout
-      - run: yarn
-      - run: yarn workspace shared-ui add react-helmet
-      - run: yarn build:schools
+      steps:
+        # Commands are run in a Windows virtual machine environment
+        - checkout
+        - run: yarn
+        - run: yarn workspace shared-ui add react-helmet
+        - run: yarn build:schools
 
 workflows:
   setEnv_and_build:

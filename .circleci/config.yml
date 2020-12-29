@@ -4,12 +4,11 @@ jobs:
   build:
     machine:
       image: ubuntu-1604:202007-01
-
-      # steps:
-      #   - checkout
-      #   - run: yarn
-      #   - run: yarn workspace shared-ui add react-helmet
-      #   - run: yarn build:schools
+      steps:
+        - checkout
+        # - run: yarn
+        # - run: yarn workspace shared-ui add react-helmet
+        # - run: yarn build:schools
 
 workflows:
   setEnv_and_build:

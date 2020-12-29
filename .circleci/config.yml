@@ -7,7 +7,7 @@ jobs:
       - checkout
       - run: sudo apt-get update
       - run: sudo apt-get install awscli
-      - run: aws configure set aws_access_key_id='aws-cli\/2.\d*.\d*'
+      - run: set AWS_ACCESS_KEY_ID=your_access_key_id
 
 
 workflows:

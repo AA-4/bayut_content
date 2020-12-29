@@ -4,11 +4,11 @@ jobs:
     machine:
       image: ubuntu-1604:201903-01
     steps:
-      - checkout
-      - run: yarn
       - run: sudo apt-get install awscli
       - run: set AWS_ACCESS_KEY_ID=your_access_key_id
       - run: set AWS_SECRET_ACCESS_KEY=your_secret_access_key 
+      - checkout
+      - run: yarn
 
 
 workflows:

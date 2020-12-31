@@ -34,7 +34,7 @@
                 }
                 &:nth-child(1) a {
                     &:before {
-                        background: url("../../images/overviewGreen.svg") no-repeat;
+                        background: url("../../images/overViewGreen.svg") no-repeat;
                         width: 1.65rem;
                         height: 1.65rem;
                     }
@@ -126,13 +126,13 @@
                     }
                     &:nth-child(1) a {
                         &:before {
-                            background: url("../../images/overview.svg") no-repeat;
+                            background: url("../../images/overView.svg") no-repeat;
                             width: 1.98rem;
                             height: 1.48rem;
                         }
                         &.active {
                             &:before {
-                                background: url("../../images/overviewGreen.svg") no-repeat;
+                                background: url("../../images/overViewGreen.svg") no-repeat;
                             }
                         }
                     }

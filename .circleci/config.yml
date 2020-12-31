@@ -11,9 +11,7 @@ jobs:
       # Commands are run in a Windows virtual machine environment
       - checkout
       - aws-cli/setup:
-          profile-name: example
-      - run: aws help
-
+      - run: export AWS_ACCESS_KEY_ID=your_access_key_id
       - run: yarn
       - run: yarn workspace shared-ui add react-helmet
       - run: yarn build:schools

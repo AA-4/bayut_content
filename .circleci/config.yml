@@ -1,6 +1,7 @@
 version: 2.1
 jobs:
   build:
+    working_directory: ~/my-app-backend
     machine:
       image: ubuntu-1604-cuda-9.2:201909-23
     steps:

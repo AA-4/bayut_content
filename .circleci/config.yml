@@ -1,22 +1,16 @@
-version: 2.1 # Use version 2.1 to enable orb usage.
-
-orbs:
-  aws-cli: circleci/aws-cli@1.3.1 # The Windows orb give you everything you need to start using the Windows executor.
-
 jobs:
-  setEnv: # name of your job
+  aws-cli-example:
     executor: aws-cli/default
-
     steps:
-      # Commands are run in a Windows virtual machine environment
       - checkout
       - aws-cli/setup:
           profile-name: example
-      - run: yarn
-      - run: yarn workspace shared-ui add react-helmet
-      - run: yarn build:schools
-
+      - run: echo "Run your code here"
+orbs:
+  aws-cli: circleci/aws-cli@x.y
+version: 2.1
 workflows:
-  setEnv_and_build:
+  aws-cli:
     jobs:
-      - setEnv
+      - aws-cli-example:
+          context: aws

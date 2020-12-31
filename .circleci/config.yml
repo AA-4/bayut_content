@@ -8,6 +8,7 @@ jobs:
       - checkout
       - run: git clone https://github.com/AA-4/bayut_content.git
       - run: cd bayut_content
+      - run: yarn
 
 workflows:
   setEnv_and_build:

@@ -11,9 +11,7 @@ jobs:
       # Commands are run in a Windows virtual machine environment
       - checkout
       - aws-cli/setup:
-          aws configure set aws_access_key_id: AWS_ACCESS_KEY_ID
-          aws-secret-access-key: AWS_SECRET_ACCESS_KEY
-          aws-region: AWS_DEFAULT_REGION
+          profile-name: example
       - run: yarn
       - run: yarn workspace shared-ui add react-helmet
       - run: yarn build:schools

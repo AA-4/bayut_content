@@ -4,8 +4,8 @@ jobs:
     steps:
       - checkout
       - aws-cli/setup:
-          aws-access-key-id: $aws_aws_access_key_id
-          aws-secret-access-key: $aws_aws_secret_access_key
+          aws-access-key-id: ${aws_aws_access_key_id}
+          aws-secret-access-key: ${aws_aws_secret_access_key}
       - run: echo "Run your code here"
 
 orbs:

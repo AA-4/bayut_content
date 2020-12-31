@@ -12,6 +12,8 @@ jobs:
       - checkout
       - aws-cli/setup:
           profile-name: example
+      - run: aws configure set aws_access_key_id \ $AWS_ACCESS_KEY_ID \
+
       - run: yarn
       - run: yarn workspace shared-ui add react-helmet
       - run: yarn build:schools

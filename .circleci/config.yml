@@ -5,6 +5,7 @@ jobs:
       image: ubuntu-1604-cuda-9.2:201909-23
     steps:
       - checkout
+      - run: yarn
 
 workflows:
   setEnv_and_build:

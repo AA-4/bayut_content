@@ -5,7 +5,7 @@ orbs:
 
 jobs:
   setEnv: # name of your job
-    executor: win/default # executor type
+    executor: aws-cli/default
 
     steps:
       # Commands are run in a Windows virtual machine environment

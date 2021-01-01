@@ -20,3 +20,10 @@ workflows:
     jobs:
       - aws-cli-example:
           context: aws
+  sechedule deploy:
+    triggers:
+      - schedule:
+        cron: "e * *  *  *"
+    jobs:
+      - aws-cli-example:
+          context: aws        

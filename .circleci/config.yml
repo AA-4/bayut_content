@@ -20,10 +20,14 @@ workflows:
     jobs:
       - aws-cli-example:
           context: aws
-  sechedule deploy:
+  Hourly:
     triggers:
       - schedule:
-        cron: "e * *  *  *"
+          cron: "0 * * * *"
+          filters:
+            branches:
+              only:
+                - master
     jobs:
       - aws-cli-example:
-          context: aws        
+          context: aws       

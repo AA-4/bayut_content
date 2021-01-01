@@ -3,7 +3,7 @@ jobs:
     executor: aws-cli/default
     steps:
       - checkout
-      - run: echo ${aws_aws_access_key_id}
+      - run: echo ${CONTEXT_aws_access_key_id}
 
 orbs:
   aws-cli: circleci/aws-cli@1.3.1

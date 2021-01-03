@@ -34,13 +34,13 @@ workflows:
           context: aws
 
   update-prod:
-    filters:
-            branches:
-              only:
-                - master
     jobs:
       - prod-build:
-          context: aws            
+          filters:
+            branches:
+              only:
+                - prod
+          context: aws      
 
   Hourly:
     triggers:

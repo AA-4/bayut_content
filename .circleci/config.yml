@@ -32,19 +32,15 @@ workflows:
     jobs:
       - stage-build:
           context: aws
-            filters:
-              branches:
-                only:
-                  - stage
 
   update-prod:
+    filters:
+            branches:
+              only:
+                - master
     jobs:
       - prod-build:
-          context: aws
-            filters:
-              branches:
-                only:
-                  - prod
+          context: aws            
 
   Hourly:
     triggers:

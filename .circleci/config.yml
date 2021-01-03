@@ -1,5 +1,5 @@
 jobs:
-  aws-cli-example:
+  stage-build:
     executor: aws-cli/default
     steps:
       - checkout
@@ -9,17 +9,43 @@ jobs:
           aws-secret-access-key: SECRET_ID
 
       - run: yarn
-      - run: yarn workspace shared-ui add react-helmet
       - run: yarn build:schools
+
+  prod-build:
+    executor: aws-cli/default
+    steps:
+      - checkout
+      - aws-cli/setup:
+          aws-access-key-id: KEY_ID
+          aws-region: REIGON
+          aws-secret-access-key: SECRET_ID
+
+      - run: yarn
+      - run: yarn develop:schools    
+      
 
 orbs:
   aws-cli: circleci/aws-cli@1.3.1
 version: 2.1
 workflows:
-  aws-cli:
+  update-stage:
     jobs:
-      - aws-cli-example:
+      - stage-build:
           context: aws
+            filters:
+              branches:
+                only:
+                  - stage
+
+  update-prod:
+    jobs:
+      - prod-build:
+          context: aws
+            filters:
+              branches:
+                only:
+                  - prod
+
   Hourly:
     triggers:
       - schedule:
@@ -29,5 +55,5 @@ workflows:
               only:
                 - master
     jobs:
-      - aws-cli-example:
+      - prod-build:
           context: aws       

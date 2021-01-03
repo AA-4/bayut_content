@@ -9,6 +9,7 @@ jobs:
           aws-secret-access-key: SECRET_ID
 
       - run: yarn
+      - run: yarn workspace shared-ui add react-helmet
       - run: yarn build:schools
 
   prod-build:

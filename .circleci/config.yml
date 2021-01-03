@@ -47,7 +47,7 @@ workflows:
                 - prod
           context: aws      
 
-  Hourly:
+  update-prod-after-every-hour:
     triggers:
       - schedule:
           cron: "0 * * * *"

@@ -5,6 +5,7 @@ import { HomePost } from 'shared-ui/core/components';
 import searchIcon from  'schools/src/images/searchIconLarge.svg';
 import loadable from '@loadable/component';
 const Select = loadable(() => import('react-select'));
+
 const HomePage = props => {
     const {
         data: {

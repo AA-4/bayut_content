@@ -31,6 +31,10 @@ workflows:
   update-stage:
     jobs:
       - stage-build:
+          filters:
+            branches:
+              only:
+                - stage
           context: aws
 
   update-prod:
@@ -49,7 +53,7 @@ workflows:
           filters:
             branches:
               only:
-                - master
+                - prod
     jobs:
       - prod-build:
           context: aws       
